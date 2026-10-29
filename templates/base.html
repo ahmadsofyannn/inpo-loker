@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inpoloker - Portal Lowongan Kerja Terpercaya{% endblock %}</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full bg-gray-50 text-gray-800 font-sans antialiased flex flex-col justify-between">
+
+    <!-- Header & Navigasi Utama (Semantic: header, nav, ul, li) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between" aria-label="Navigasi Utama">
+            <div class="flex items-center">
+                <a href="/" class="text-2xl font-extrabold text-indigo-600 tracking-tight">
+                    Inpo<span class="text-gray-900">loker</span>
+                </a>
+            </div>
+            <ul class="flex items-center space-x-6 text-sm font-medium">
+                <li>
+                    <a href="/" class="text-gray-600 hover:text-indigo-600 transition">Beranda</a>
+                </li>
+                <li>
+                    <a href="/admin/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-indigo-600 transition">Admin Panel</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Area Konten Utama (Semantic: main, section) -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <section aria-label="Konten Dinamis">
+            {% block content %}
+            {% endblock %}
+        </section>
+    </main>
+
+    <!-- Footer Situs (Semantic: footer) -->
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            &copy; 2026 Inpoloker. Platform Lowongan Kerja Impianmu.
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Lamaran Berhasil Dikirim - Inpoloker{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center my-12">
+    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+        ✓
+    </div>
+    <h1 class="text-2xl font-extrabold text-gray-900 mb-2">Lamaran Berhasil Dikirim!</h1>
+    <p class="text-sm text-gray-600 mb-6">Terima kasih telah melamar posisi <span class="font-semibold text-gray-800">{{ job.title }}</span> di <span class="font-semibold text-gray-800">{{ job.company.name }}</span>. Data dan CV kamu telah kami teruskan ke pihak perusahaan.</p>
+    
+    <a href="{% url 'job_list' %}" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm px-6 py-3 rounded-xl transition shadow-sm">
+        Kembali ke Beranda
+    </a>
+</div>
+{% endblock %}
