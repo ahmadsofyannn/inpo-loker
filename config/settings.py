@@ -129,10 +129,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# Mengaktifkan penyimpanan terkompresi WhiteNoise
+# Mengaktifkan penyimpanan terkompresi WhiteNoise (diubah ke CompressedStaticFilesStorage untuk Vercel)
 STORAGES = {
     "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
     },
 }
 
